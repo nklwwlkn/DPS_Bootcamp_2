@@ -6,14 +6,19 @@ const recipeSchema = new mongoose.Schema(
     type: String,
     trim: true,
     },
-    createdAt: {
-      type: Date,
-      default: Date.now(),
+    time: {
+      type: String,
+      default: 0,
       select: false
+    },
+    ingredients: {
+      type: Array,
+    },
+    desctriptions: {
+      type: Array
     }
   }
 );
-
 
 const Recipe = mongoose.model('Recipe', recipeSchema);
 
