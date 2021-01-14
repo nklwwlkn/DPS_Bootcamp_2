@@ -2,15 +2,8 @@ const mongoose = require('mongoose');
 
 const recipeSchema = new mongoose.Schema(
   {
-    title: {
-    type: String,
-    trim: true,
-    },
-    time: {
-      type: String,
-      default: 0,
-      select: false
-    },
+    title: String,
+    time: String,
     ingredients: {
       type: Array,
     },
